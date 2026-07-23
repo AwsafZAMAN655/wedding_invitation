@@ -862,4 +862,250 @@ footer{
     z-index:999;
 
 }
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
 
+/* For tablets and smaller laptops */
+@media screen and (max-width: 768px) {
+
+    /* Envelope - smaller for mobile */
+    .envelope-wrapper {
+        width: 340px;
+        height: 250px;
+    }
+
+    /* Shadow - adjust for smaller envelope */
+    .shadow {
+        width: 250px;
+        height: 35px;
+        bottom: -30px;
+    }
+
+    /* Card - smaller for mobile */
+    .invitation-card {
+        width: 280px;
+        height: 380px;
+        transform: translateX(-50%) translateY(130px);
+    }
+
+    /* Card open position - adjust for mobile */
+    .envelope-wrapper.open .invitation-card {
+        transform: translateX(-50%) translateY(-160px);
+    }
+
+    /* Seal - smaller for mobile */
+    .seal {
+        width: 60px;
+        height: 60px;
+        top: 85px;
+        font-size: 24px;
+    }
+
+    /* Card text - smaller for mobile */
+    .card-bg h1 {
+        font-size: 38px;
+    }
+
+    .card-bg h4 {
+        font-size: 12px;
+    }
+
+    .card-bg span {
+        font-size: 24px;
+    }
+
+    .card-bg p {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .bismillah {
+        width: 100px !important;
+        margin-bottom: 12px;
+    }
+
+    /* Hero section - adjust padding */
+    .hero {
+        padding: 20px;
+    }
+
+    /* Tap text - adjust position */
+    .tap {
+        bottom: -50px;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    /* Banner text - smaller */
+    .banner-content h1 {
+        font-size: 42px;
+    }
+
+    .banner-content p {
+        font-size: 16px;
+    }
+
+    .amp {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+
+    /* Couple section - stack vertically */
+    .couple {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .divider img {
+        width: 50px;
+        transform: rotate(90deg);
+    }
+
+    .couple-card h3 {
+        font-size: 32px;
+    }
+
+    .couple-card p {
+        font-size: 16px;
+    }
+
+    /* Countdown - smaller */
+    #timer {
+        font-size: 32px;
+        letter-spacing: 3px;
+    }
+
+    /* Events - smaller */
+    .event h3 {
+        font-size: 26px;
+    }
+
+    .event p {
+        font-size: 16px;
+    }
+
+    /* Blessings - smaller */
+    .blessings h2 {
+        font-size: 36px;
+    }
+
+    /* General section padding */
+    section {
+        padding: 60px 15px;
+    }
+
+    /* Banner padding */
+    .banner {
+        padding: 60px 15px;
+    }
+
+    .banner-content h5 {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+}
+
+/* For very small phones */
+@media screen and (max-width: 420px) {
+
+    /* Even smaller envelope */
+    .envelope-wrapper {
+        width: 280px;
+        height: 210px;
+    }
+
+    .shadow {
+        width: 200px;
+        height: 28px;
+        bottom: -25px;
+    }
+
+    /* Even smaller card */
+    .invitation-card {
+        width: 230px;
+        height: 320px;
+        transform: translateX(-50%) translateY(110px);
+    }
+
+    .envelope-wrapper.open .invitation-card {
+        transform: translateX(-50%) translateY(-130px);
+    }
+
+    .seal {
+        width: 50px;
+        height: 50px;
+        top: 72px;
+        font-size: 20px;
+    }
+
+    .card-bg h1 {
+        font-size: 30px;
+    }
+
+    .card-bg h4 {
+        font-size: 10px;
+    }
+
+    .card-bg span {
+        font-size: 20px;
+        margin: 8px 0;
+    }
+
+    .card-bg p {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    .bismillah {
+        width: 80px !important;
+        margin-bottom: 8px;
+    }
+
+    .tap {
+        bottom: -40px;
+        font-size: 10px;
+    }
+
+    /* Banner text - even smaller */
+    .banner-content h1 {
+        font-size: 32px;
+    }
+
+    .banner-content p {
+        font-size: 14px;
+    }
+
+    .amp {
+        font-size: 22px;
+    }
+
+    .couple-card h3 {
+        font-size: 26px;
+    }
+
+    .couple-card p {
+        font-size: 14px;
+    }
+
+    #timer {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .event h3 {
+        font-size: 22px;
+    }
+
+    .event p {
+        font-size: 14px;
+    }
+
+    .blessings h2 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 40px 12px;
+    }
+}
