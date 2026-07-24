@@ -331,10 +331,6 @@ body{
    INVITATION CARD
 ===================================== */
 
-/* =====================================
-    INVITATION CARD
-===================================== */
-
 .invitation-card{
 
     position:absolute;
@@ -814,33 +810,111 @@ section{
 
 .blessings{
 
+    position: relative;
+
     text-align:center;
 
-    background:linear-gradient(180deg,var(--maroon),#3d0f0f);
+    background: linear-gradient(135deg, #2c0a08, #5b1917, #2c0a08);
 
     color:#fff;
 
-}
+    padding: 80px 20px;
 
-.blessings h2{
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:60px;
-
-    font-weight:400;
-
-    margin-bottom:20px;
+    overflow: hidden;
 
 }
 
-.blessings p{
+.blessings-overlay {
 
-    font-family:'Cinzel',serif;
+    position: absolute;
 
-    color:var(--gold);
+    inset: 0;
 
-    letter-spacing:3px;
+    background: 
+
+        radial-gradient(circle at 20% 50%, rgba(201, 168, 106, 0.08), transparent 60%),
+
+        radial-gradient(circle at 80% 50%, rgba(201, 168, 106, 0.08), transparent 60%);
+
+    pointer-events: none;
+
+}
+
+.blessings-content {
+
+    position: relative;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    z-index: 2;
+
+}
+
+.blessings h2 {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 48px;
+
+    font-weight: 400;
+
+    color: #fff;
+
+    line-height: 1.3;
+
+    margin-bottom: 15px;
+
+}
+
+.blessings-divider {
+
+    font-family: 'Cinzel', serif;
+
+    color: var(--gold);
+
+    font-size: 18px;
+
+    letter-spacing: 8px;
+
+    margin: 15px 0 20px 0;
+
+    opacity: 0.6;
+
+}
+
+.blessings p {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    line-height: 1.8;
+
+    max-width: 500px;
+
+    margin: 0 auto 8px auto;
+
+}
+
+.blessings-small {
+
+    font-family: 'Cinzel', serif !important;
+
+    font-size: 12px !important;
+
+    color: var(--gold) !important;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-top: 15px;
+
+    opacity: 0.7;
 
 }
 
@@ -907,17 +981,17 @@ footer{
         filter: blur(15px);
     }
 
-    /* Card - fits phone screen */
+    /* Card - fits phone screen (BIGGER) */
     .invitation-card {
-        width: 260px;
-        height: 350px;
+        width: 290px;
+        height: 400px;
         transform: translateX(-50%) translateY(120px);
         border-radius: 18px;
     }
 
     /* Card open position - centered on phone */
     .envelope-wrapper.open .invitation-card {
-        transform: translateX(-50%) translateY(-150px);
+        transform: translateX(-50%) translateY(-160px);
     }
 
     /* Seal - smaller for phone */
@@ -928,37 +1002,37 @@ footer{
         font-size: 22px;
     }
 
-    /* Card text - smaller for phone */
+    /* Card text - bigger for phone */
     .card-bg {
         padding: 25px;
     }
 
     .card-bg h1 {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .card-bg h4 {
-        font-size: 10px;
+        font-size: 12px;
         letter-spacing: 2px;
         margin-bottom: 12px;
     }
 
     .card-bg span {
-        font-size: 22px;
-        margin: 8px 0;
+        font-size: 26px;
+        margin: 10px 0;
     }
 
     .card-bg p {
-        font-size: 11px;
-        margin-top: 12px;
+        font-size: 14px;
+        margin-top: 15px;
         letter-spacing: 1px;
     }
 
-    /* Bismillah - smaller on phone */
+    /* Bismillah - bigger on phone */
     .bismillah {
-        width: 80px !important;
-        max-width: 40% !important;
-        margin: 0 auto 12px auto;
+        width: 100px !important;
+        max-width: 45% !important;
+        margin: 0 auto 15px auto;
     }
 
     /* Tap text - smaller */
@@ -975,49 +1049,56 @@ footer{
     }
 
     .banner-content h1 {
-        font-size: 36px;
+        font-size: 48px;
     }
 
     .banner-content h5 {
-        font-size: 10px;
-        letter-spacing: 2px;
-        margin-bottom: 12px;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
     }
 
     .banner-content p {
-        font-size: 14px;
-        margin-top: 15px;
+        font-size: 18px;
+        margin-top: 18px;
     }
 
     .amp {
-        font-size: 24px;
-        margin: 8px 0;
+        font-size: 32px;
+        margin: 12px 0;
+    }
+
+    /* Bismillah on main banner - mobile */
+    .banner-content .bismillah-top {
+        width: 130px;
+        max-width: 35%;
+        margin: 0 auto 15px auto;
     }
 
     /* Couple section - stack vertically */
     .couple {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 20px;
         padding: 0 10px;
     }
 
     .couple-card {
-        padding: 25px 20px;
+        padding: 30px 25px;
         border-radius: 20px;
     }
 
     .couple-card h2 {
-        font-size: 14px;
-        margin-bottom: 8px;
+        font-size: 18px;
+        margin-bottom: 10px;
     }
 
     .couple-card h3 {
-        font-size: 28px;
-        margin-bottom: 12px;
+        font-size: 34px;
+        margin-bottom: 15px;
     }
 
     .couple-card p {
-        font-size: 15px;
+        font-size: 18px;
         line-height: 1.8;
     }
 
@@ -1028,17 +1109,17 @@ footer{
 
     /* Countdown - smaller */
     .countdown {
-        padding: 50px 20px;
+        padding: 60px 20px;
     }
 
     .countdown h2 {
-        font-size: 18px;
-        margin-bottom: 15px;
+        font-size: 22px;
+        margin-bottom: 20px;
     }
 
     #timer {
-        font-size: 28px;
-        letter-spacing: 2px;
+        font-size: 36px;
+        letter-spacing: 3px;
     }
 
     /* Events - smaller */
@@ -1047,40 +1128,53 @@ footer{
     }
 
     .timeline h2 {
-        font-size: 22px;
-        margin-bottom: 30px;
+        font-size: 26px;
+        margin-bottom: 35px;
     }
 
     .event {
-        padding: 20px;
+        padding: 25px;
         border-left-width: 4px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         border-radius: 15px;
     }
 
     .event h3 {
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-
-    .event p {
-        font-size: 15px;
-        line-height: 1.8;
-    }
-
-    /* Blessings - smaller */
-    .blessings {
-        padding: 50px 20px;
-    }
-
-    .blessings h2 {
-        font-size: 30px;
+        font-size: 26px;
+        font-weight: 700;
         margin-bottom: 12px;
     }
 
+    .event-date {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .event p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    /* Blessings - mobile */
+    .blessings {
+        padding: 60px 20px;
+    }
+
+    .blessings h2 {
+        font-size: 38px;
+    }
+
     .blessings p {
-        font-size: 14px;
-        letter-spacing: 2px;
+        font-size: 20px;
+    }
+
+    .blessings-divider {
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+
+    .blessings-small {
+        font-size: 12px !important;
     }
 
     /* General section padding */
@@ -1118,14 +1212,14 @@ footer{
 
     /* Even smaller card */
     .invitation-card {
-        width: 220px;
-        height: 300px;
+        width: 250px;
+        height: 350px;
         transform: translateX(-50%) translateY(100px);
         border-radius: 15px;
     }
 
     .envelope-wrapper.open .invitation-card {
-        transform: translateX(-50%) translateY(-120px);
+        transform: translateX(-50%) translateY(-130px);
     }
 
     .seal {
@@ -1136,33 +1230,33 @@ footer{
     }
 
     .card-bg {
-        padding: 18px;
+        padding: 20px;
     }
 
     .card-bg h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .card-bg h4 {
-        font-size: 9px;
+        font-size: 10px;
         letter-spacing: 1.5px;
         margin-bottom: 8px;
     }
 
     .card-bg span {
-        font-size: 18px;
-        margin: 5px 0;
+        font-size: 22px;
+        margin: 8px 0;
     }
 
     .card-bg p {
-        font-size: 10px;
-        margin-top: 10px;
+        font-size: 12px;
+        margin-top: 12px;
     }
 
     .bismillah {
-        width: 60px !important;
-        max-width: 35% !important;
-        margin: 0 auto 8px auto;
+        width: 80px !important;
+        max-width: 40% !important;
+        margin: 0 auto 10px auto;
     }
 
     .tap {
@@ -1173,53 +1267,67 @@ footer{
 
     /* Banner text - even smaller */
     .banner-content h1 {
-        font-size: 28px;
+        font-size: 38px;
     }
 
     .banner-content p {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .amp {
-        font-size: 20px;
-        margin: 5px 0;
+        font-size: 26px;
+    }
+
+    .banner-content .bismillah-top {
+        width: 100px;
+        max-width: 30%;
     }
 
     /* Couple cards - even smaller */
     .couple-card {
-        padding: 20px 15px;
+        padding: 25px 20px;
     }
 
     .couple-card h3 {
-        font-size: 22px;
+        font-size: 28px;
     }
 
     .couple-card p {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     /* Countdown - even smaller */
     #timer {
-        font-size: 22px;
+        font-size: 28px;
         letter-spacing: 1px;
     }
 
     /* Events - even smaller */
     .event {
-        padding: 15px;
+        padding: 18px;
     }
 
     .event h3 {
-        font-size: 18px;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .event-date {
+        font-size: 17px;
+        font-weight: 600;
     }
 
     .event p {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     /* Blessings - even smaller */
     .blessings h2 {
-        font-size: 24px;
+        font-size: 30px;
+    }
+
+    .blessings p {
+        font-size: 17px;
     }
 
     section {
@@ -1240,20 +1348,4 @@ footer{
     .invitation-card {
         height: 370px;
     }
-}
-/* Mobile Event Title */
-.event h3 {
-    font-size: 22px;
-    font-weight: 700;
-}
-
-/* Mobile Event Date */
-.event-date {
-    font-size: 17px;
-    font-weight: 600;
-}
-
-/* Mobile Event Details */
-.event p {
-    font-size: 15px;
 }
