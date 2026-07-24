@@ -420,11 +420,13 @@ body{
 
     font-family:'Great Vibes',cursive;
 
-    font-size:52px;
+    font-size:32px;
 
     color:var(--maroon);
 
     font-weight:400;
+
+    line-height: 1.1;
 
 }
 
@@ -574,6 +576,14 @@ body{
 
     z-index:2;
 
+}
+/* Bismillah on main banner */
+.banner-content .bismillah-top {
+    width: 150px;
+    max-width: 35%;
+    height: auto;
+    margin: 0 auto 15px auto;
+    display: block;
 }
 
 .banner-content h5{
@@ -775,22 +785,27 @@ section{
 
 }
 
+/* Event Title - Boldest */
 .event h3{
-
     color:var(--maroon);
-
     font-size:34px;
-
+    font-weight: 700;
     margin-bottom:15px;
-
 }
 
+/* Event Date - Semi-bold (less than title) */
+.event-date {
+    font-weight: 600;
+    color: var(--gold);
+    font-size: 22px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Event Details - Normal */
 .event p{
-
     line-height:2;
-
     font-size:20px;
-
 }
 
 /* =====================================
@@ -862,194 +877,281 @@ footer{
     z-index:999;
 
 }
+
 /* =====================================
-   MOBILE RESPONSIVE
+   MOBILE RESPONSIVE (9:16 PHONES)
 ===================================== */
 
-/* For tablets and smaller laptops */
+/* For all phones (portrait mode) */
 @media screen and (max-width: 768px) {
 
-    /* Envelope - smaller for mobile */
+    /* Hero section - full screen */
+    .hero {
+        padding: 15px;
+        height: 100vh;
+        min-height: 100vh;
+    }
+
+    /* Envelope - perfect size for phone */
     .envelope-wrapper {
-        width: 340px;
-        height: 250px;
+        width: 320px;
+        height: 235px;
+        transform: scale(0.9);
     }
 
     /* Shadow - adjust for smaller envelope */
     .shadow {
-        width: 250px;
-        height: 35px;
-        bottom: -30px;
+        width: 230px;
+        height: 30px;
+        bottom: -25px;
+        filter: blur(15px);
     }
 
-    /* Card - smaller for mobile */
+    /* Card - fits phone screen */
     .invitation-card {
-        width: 280px;
-        height: 380px;
-        transform: translateX(-50%) translateY(130px);
+        width: 260px;
+        height: 350px;
+        transform: translateX(-50%) translateY(120px);
+        border-radius: 18px;
     }
 
-    /* Card open position - adjust for mobile */
+    /* Card open position - centered on phone */
     .envelope-wrapper.open .invitation-card {
-        transform: translateX(-50%) translateY(-160px);
+        transform: translateX(-50%) translateY(-150px);
     }
 
-    /* Seal - smaller for mobile */
+    /* Seal - smaller for phone */
     .seal {
-        width: 60px;
-        height: 60px;
-        top: 85px;
-        font-size: 24px;
+        width: 55px;
+        height: 55px;
+        top: 80px;
+        font-size: 22px;
     }
 
-    /* Card text - smaller for mobile */
+    /* Card text - smaller for phone */
+    .card-bg {
+        padding: 25px;
+    }
+
     .card-bg h1 {
-        font-size: 38px;
+        font-size: 20px;
     }
 
     .card-bg h4 {
-        font-size: 12px;
-    }
-
-    .card-bg span {
-        font-size: 24px;
-    }
-
-    .card-bg p {
-        font-size: 12px;
-        margin-top: 15px;
-    }
-
-    .bismillah {
-        width: 100px !important;
+        font-size: 10px;
+        letter-spacing: 2px;
         margin-bottom: 12px;
     }
 
-    /* Hero section - adjust padding */
-    .hero {
-        padding: 20px;
+    .card-bg span {
+        font-size: 22px;
+        margin: 8px 0;
     }
 
-    /* Tap text - adjust position */
+    .card-bg p {
+        font-size: 11px;
+        margin-top: 12px;
+        letter-spacing: 1px;
+    }
+
+    /* Bismillah - smaller on phone */
+    .bismillah {
+        width: 80px !important;
+        max-width: 40% !important;
+        margin: 0 auto 12px auto;
+    }
+
+    /* Tap text - smaller */
     .tap {
-        bottom: -50px;
-        font-size: 12px;
+        bottom: -45px;
+        font-size: 11px;
         letter-spacing: 2px;
     }
 
-    /* Banner text - smaller */
+    /* Banner - full screen */
+    .banner {
+        padding: 40px 15px;
+        min-height: 100vh;
+    }
+
     .banner-content h1 {
-        font-size: 42px;
+        font-size: 36px;
+    }
+
+    .banner-content h5 {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
     }
 
     .banner-content p {
-        font-size: 16px;
+        font-size: 14px;
+        margin-top: 15px;
     }
 
     .amp {
-        font-size: 28px;
-        margin: 10px 0;
+        font-size: 24px;
+        margin: 8px 0;
     }
 
     /* Couple section - stack vertically */
     .couple {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
+        padding: 0 10px;
     }
 
-    .divider img {
-        width: 50px;
-        transform: rotate(90deg);
+    .couple-card {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .couple-card h2 {
+        font-size: 14px;
+        margin-bottom: 8px;
     }
 
     .couple-card h3 {
-        font-size: 32px;
+        font-size: 28px;
+        margin-bottom: 12px;
     }
 
     .couple-card p {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .divider img {
+        width: 40px;
+        transform: rotate(90deg);
     }
 
     /* Countdown - smaller */
+    .countdown {
+        padding: 50px 20px;
+    }
+
+    .countdown h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
     #timer {
-        font-size: 32px;
-        letter-spacing: 3px;
+        font-size: 28px;
+        letter-spacing: 2px;
     }
 
     /* Events - smaller */
+    .timeline {
+        padding: 0 10px;
+    }
+
+    .timeline h2 {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .event {
+        padding: 20px;
+        border-left-width: 4px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+
     .event h3 {
-        font-size: 26px;
+        font-size: 22px;
+        margin-bottom: 10px;
     }
 
     .event p {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.8;
     }
 
     /* Blessings - smaller */
+    .blessings {
+        padding: 50px 20px;
+    }
+
     .blessings h2 {
-        font-size: 36px;
+        font-size: 30px;
+        margin-bottom: 12px;
+    }
+
+    .blessings p {
+        font-size: 14px;
+        letter-spacing: 2px;
     }
 
     /* General section padding */
     section {
-        padding: 60px 15px;
+        padding: 50px 15px;
     }
 
-    /* Banner padding */
-    .banner {
-        padding: 60px 15px;
-    }
-
-    .banner-content h5 {
+    /* Footer */
+    footer {
+        padding: 20px;
         font-size: 12px;
-        letter-spacing: 3px;
+    }
+
+    /* Remove fog animation on mobile for performance */
+    .fog {
+        animation: none;
     }
 }
 
-/* For very small phones */
+/* For very small phones (iPhone SE, etc.) */
 @media screen and (max-width: 420px) {
 
     /* Even smaller envelope */
     .envelope-wrapper {
-        width: 280px;
-        height: 210px;
+        width: 270px;
+        height: 200px;
+        transform: scale(0.85);
     }
 
     .shadow {
-        width: 200px;
-        height: 28px;
-        bottom: -25px;
+        width: 190px;
+        height: 25px;
+        bottom: -20px;
     }
 
     /* Even smaller card */
     .invitation-card {
-        width: 230px;
-        height: 320px;
-        transform: translateX(-50%) translateY(110px);
+        width: 220px;
+        height: 300px;
+        transform: translateX(-50%) translateY(100px);
+        border-radius: 15px;
     }
 
     .envelope-wrapper.open .invitation-card {
-        transform: translateX(-50%) translateY(-130px);
+        transform: translateX(-50%) translateY(-120px);
     }
 
     .seal {
-        width: 50px;
-        height: 50px;
-        top: 72px;
-        font-size: 20px;
+        width: 45px;
+        height: 45px;
+        top: 68px;
+        font-size: 18px;
+    }
+
+    .card-bg {
+        padding: 18px;
     }
 
     .card-bg h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .card-bg h4 {
-        font-size: 10px;
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
     }
 
     .card-bg span {
-        font-size: 20px;
-        margin: 8px 0;
+        font-size: 18px;
+        margin: 5px 0;
     }
 
     .card-bg p {
@@ -1058,54 +1160,100 @@ footer{
     }
 
     .bismillah {
-        width: 80px !important;
-        margin-bottom: 8px;
+        width: 60px !important;
+        max-width: 35% !important;
+        margin: 0 auto 8px auto;
     }
 
     .tap {
-        bottom: -40px;
-        font-size: 10px;
+        bottom: -38px;
+        font-size: 9px;
+        letter-spacing: 1.5px;
     }
 
     /* Banner text - even smaller */
     .banner-content h1 {
-        font-size: 32px;
-    }
-
-    .banner-content p {
-        font-size: 14px;
-    }
-
-    .amp {
-        font-size: 22px;
-    }
-
-    .couple-card h3 {
-        font-size: 26px;
-    }
-
-    .couple-card p {
-        font-size: 14px;
-    }
-
-    #timer {
-        font-size: 24px;
-        letter-spacing: 2px;
-    }
-
-    .event h3 {
-        font-size: 22px;
-    }
-
-    .event p {
-        font-size: 14px;
-    }
-
-    .blessings h2 {
         font-size: 28px;
     }
 
-    section {
-        padding: 40px 12px;
+    .banner-content p {
+        font-size: 12px;
     }
+
+    .amp {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+
+    /* Couple cards - even smaller */
+    .couple-card {
+        padding: 20px 15px;
+    }
+
+    .couple-card h3 {
+        font-size: 22px;
+    }
+
+    .couple-card p {
+        font-size: 13px;
+    }
+
+    /* Countdown - even smaller */
+    #timer {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    /* Events - even smaller */
+    .event {
+        padding: 15px;
+    }
+
+    .event h3 {
+        font-size: 18px;
+    }
+
+    .event p {
+        font-size: 13px;
+    }
+
+    /* Blessings - even smaller */
+    .blessings h2 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 35px 10px;
+    }
+
+    .hero {
+        padding: 10px;
+    }
+}
+
+/* For taller phones (like iPhone 14 Pro Max) */
+@media screen and (min-height: 800px) and (max-width: 768px) {
+    .envelope-wrapper {
+        transform: scale(1);
+    }
+    
+    .invitation-card {
+        height: 370px;
+    }
+}
+/* Mobile Event Title */
+.event h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Mobile Event Date */
+.event-date {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Mobile Event Details */
+.event p {
+    font-size: 15px;
 }

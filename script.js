@@ -16,29 +16,25 @@ let playing = false;
 
 seal.addEventListener("click", () => {
 
-    // Open envelope
     wrapper.classList.add("open");
 
-    // Play music
     if(!playing){
         music.play();
         playing=true;
         musicBtn.textContent="🔊";
     }
 
-    // Show website and auto-scroll after card is visible
     setTimeout(() => {
         website.style.display = "block";
         
-        // Wait a moment so user sees the card, then scroll
         setTimeout(() => {
             window.scrollTo({
                 top: window.innerHeight,
                 behavior: "smooth"
             });
-        }, 1500); // 👈 Shows card for 1.5 seconds then scrolls
+        }, 400); // 👈 Reduced from 1500 to 400ms
 
-    }, 800);
+    }, 600); // 👈 Reduced from 800 to 600ms
 
 });
 // ============================
